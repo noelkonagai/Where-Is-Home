@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Where is home?</title>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		
+		<header>
+		<span class='scroll-to-top'><i class="fa fa-chevron-up" style="font-size:24px"></i></span>
+		<span class='space'></span>
+<!-- 		<span class='menuitem'>About</span> -->
+		</header>
+		
+		<section class='title top'>
+
+		<div id='container'></div>
+			<div id="currentInfo">
+				<span id="year1990" class="year"></span>
+				<span id="year1995" class="year"></span>
+				<span id="year2000" class="year"></span>
+			</div>
+
+		<script type="text/javascript" src="third-party/Detector.js"></script>
+ 		<script type="text/javascript" src="third-party/three.min.js"></script>
+		<script type="text/javascript" src="third-party/Tween.js"></script>
+		<script type="text/javascript" src="globe.js"></script>
+		
+		<span class='title'>Where is home?</span>
+		</section>
+		
+		<section class='q_2'>
+			<span class='q'>
+				<p class='css-button-light css-button-start'> start </p>
+			</span>
+		</section>
+		<section class='q_1 first_section'>
+			<span class='q'>
+			<div class='quote'>
+				<p><h1 class='quote'>"How much do we belong to the country of our first passport and how much do we belong to the 'other countries' that allow us to enter?"</h1></p>
+				<p class='quote'>Quote by Orhan Pamuk</p>
+			</div>
+			<div class='explanation'>
+				<p class='explanation'>In the globe above, you have seen the visualization of the population at each coordinate point on Earth. While many of us live in one location, we might not consider that as our home. This project intends to collect data on what you consider your home. To the question 'where is home?' there are some who might give a single-word answer naming a city or town, but other might have a list of places that they want to share. Whether you are the latter or the former person, you will have the opportunity to enter up to three locations that you consider your home. Click the button below to proceed with the questionnaire.</p></div>
+				<span class='q'>
+					<p class='css-button-dark css-button-toSection2'> next </p>
+				</span>
+			</span>	
+
+		</section>	
+		<section class='q_1 second_section'>
+			<span class='q'>
+			<div class='your_info'>
+				<h1>Your Information</h1>
+			</div>
+			<div class='explanation2'>
+				<p class='explanation'>The data that you will input will be saved to a server and will be openly accessible for API requests.</p></div>
+				<input type='text' id='name' placeholder='Enter your name'>
+				<span class='q'>
+					<p class='css-button-dark css-button-toSection3'> next </p>
+				</span>
+			</span>
+		</section>
+		<section class='q_1 third_section'>
+			<span class='q'>
+			<div class='default_answer'>
+				<h1>Your default home</h1>
+			</div>
+			<div class='explanation2'>
+				<p class='explanation3' style='margin-bottom: 50px'>When you give the shortest introduction, which city do you pick as your home?</p>
+				<input style='margin-bottom: 50px'; id="default_city" placeholder="Enter a city or town" type="text"></input>
+				<p>Primarily, what do you consider this place to be?</p>
+					<input type='radio' name='default_place' id='d-1'>Your birthplace<br>
+					<input type='radio' name='default_place' id='d-2'>Your father's place of origin<br>
+					<input type='radio' name='default_place' id='d-3'>Your mother's place of origin<br>
+					<input type='radio' name='default_place' id='d-4'>Lived here the longest<br>
+					<input type='radio' name='default_place' id='d-5'>Current location<br>
+					<input type='radio' name='default_place' id='d-6'>Other<br>
+				</p>
+				<span class='q'>
+					<p class='css-button-dark css-button-toSection4'> next </p>
+				</span>
+			</span>
+		</section>
+		
+		<section class='q_1 fourth_section'>
+			<span class='q'>
+			<div class='default_answer'>
+				<h1>Second home</h1>
+			</div>
+			<div class='explanation2'>
+				<p style='margin-bottom: 50px'>If your introduction continues, what is the next city you pick as your home? If not applicable, click next.</p>
+				<input style='margin-bottom: 50px' type='text' id='second_city' placeholder="Enter a city or town" type="text"></input>
+				
+				<p>Primarily, what do you consider this place to be?</p>
+				<input type='radio' name='second_place' id='s-1'>Your birthplace<br>
+				<input type='radio' name='second_place' id='s-2'>Your father's place of origin<br>
+				<input type='radio' name='second_place' id='s-3'>Your mother's place of origin<br>
+				<input type='radio' name='second_place' id='s-4'>Lived here the longest<br>
+				<input type='radio' name='second_place' id='s-5'>Current location<br>
+				<input type='radio' name='second_place' id='s-6'>Other<br>
+				</p>
+				<span class='q'>
+					<p class='css-button-dark css-button-toSection5'> next </p>
+				</span>
+
+			</span>
+		</section>
+
+		<section class='q_1 fifth_section'>
+			<span class='q'>
+			<div class='default_answer'>
+				<h1>Third home</h1>
+			</div>
+			<div class='explanation3'>
+				<p style='margin-bottom: 50px'>If your introduction continues, what is the next city you pick as your home? If not applicable, click next.</p>
+				<input style='margin-bottom: 50px' type='text' id='third_city' placeholder="Enter a city or town" type="text"></input>
+
+				<p>Primarily, what do you consider this place to be?</p>
+
+				<input type='radio' name='third_place' id='t-1'>Your birthplace<br>
+				<input type='radio' name='third_place' id='t-2'>Your father's place of origin<br>
+				<input type='radio' name='third_place' id='t-3'>Your mother's place of origin<br>
+				<input type='radio' name='third_place' id='t-4'>Lived here the longest<br>
+				<input type='radio' name='third_place' id='t-5'>Current location<br>
+				<input type='radio' name='third_place' id='t-6'>Other<br>
+				</p>
+
+				<span class='q'>
+<!-- 					<a href='/results' style='text-decoration: none'> -->
+					<p class='css-button-dark submit-button' id='submit'> submit </p>
+<!-- 					</a> -->
+				</span>
+
+			</span>
+		</div>
+		</span>
+		</section>
+		
+		<section class='footer'>
+
+				<p style='text-align: center'>Thank you for completing the questionnaire. © Noel Konagai 2016</p>
+
+		</section>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpDweL5tOztdr4E6FzdDiTsYxNFe8lKEQ&libraries=places"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
