@@ -46,9 +46,11 @@ app.get("/results", function (request, response){
 });
 
 //Main Page Route - Show the results of data input
-app.get("/form", function (request, response){
-	response.render('form');
+app.get("/about", function (request, response){
+	response.render('about');
 });
+
+
 
 //SAVE an object to the db
 app.post("/save", function(req,res){
@@ -122,8 +124,11 @@ app.get("/api/jsonData", function(req,res){
 		//res.json(theRows);
 
 		var array_all = ["All",[]]
+		var array_default = ["Default",[]]
+		var array_second = ["Second",[]]
+		var array_third = ["Third",[]]
 		for (i = 0; i < theRows.length; i++){
-		
+			//pushes to ALL
 			array_all[1].push(Math.round(theRows[i].doc.default.lat));
 			array_all[1].push(Math.round(theRows[i].doc.default.lng));
 			array_all[1].push(0.01);
@@ -133,56 +138,36 @@ app.get("/api/jsonData", function(req,res){
 			array_all[1].push(Math.round(theRows[i].doc.third.lat));
 			array_all[1].push(Math.round(theRows[i].doc.third.lng));
 			array_all[1].push(0.01);
-
-		};
-		//console.log(array_all)
-
-		var array_default = ["Default",[]]
-		for (i = 0; i < theRows.length; i++){
-		
+			//pushes to Default
 			array_default[1].push(Math.round(theRows[i].doc.default.lat));
 			array_default[1].push(Math.round(theRows[i].doc.default.lng));
 			array_default[1].push(0.01);
 			for (j = 0; j < 6; j++){
 				array_default[1].push(0)
 			};
+			//pushes to Second
+			// for (k = 0; k < 3; k++){
+			// 	array_second[1].push(0)
+			// };
 
-		};
-
-		//console.log(array_default)
-
-		var array_second = ["Second",[]]
-		for (i = 0; i < theRows.length; i++){
-			
-			for (j = 0; j < 3; j++){
-				array_second[1].push(0)
-			};
+			array_second[1].push(Math.round(theRows[i].doc.default.lat));
+			array_second[1].push(Math.round(theRows[i].doc.default.lng));
+			array_second[1].push(0)
 			array_second[1].push(Math.round(theRows[i].doc.second.lat));
 			array_second[1].push(Math.round(theRows[i].doc.second.lng));
 			array_second[1].push(0.01);
 
-			for (k = 0; k < 3; k++){
+			for (l = 0; l < 3; l++){
 				array_second[1].push(0)
 			};
-
-		};
-
-		//console.log(array_second)
-
-
-		var array_third = ["Third",[]]
-		for (i = 0; i < theRows.length; i++){
-	
-			for (j = 0; j < 6; j++){
+			//pushes to third
+			for (m = 0; m < 6; m++){
 				array_third[1].push(0)
 			};
 			array_third[1].push(Math.round(theRows[i].doc.third.lat));
 			array_third[1].push(Math.round(theRows[i].doc.third.lng));
 			array_third[1].push(0.01);
-
 		};
-
-		//console.log(array_third)
 
 		var globeGLFile = []
 		globeGLFile.push(array_all)

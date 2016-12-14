@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Where is home? | About</title>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body class='about'>
+
+	<header class='sticky'>
+			<span class='scroll-to-top menuitem menuitem-left'><i class="fa fa-chevron-up" style="font-size:24px"></i></span>
+			<span class='menuitem menuitem-right sliding-middle-out'><a href='/api/all'>API</a></span>
+			<span class='menuitem menuitem-right sliding-middle-out'><a href='/'>main</a></span>
+			<span class='menuitem menuitem-right sliding-middle-out'><a href='/results'>results</a></span>
+
+	</header>
+
+		<section class='about section_about'>
+		<div class='about'>
+			<div class='your_info'>
+				<h1>About</h1>
+			</div>
+			<div class='explanation2'>
+				<p class='explanation'>This is Noel Konagai's final project for the class called Mashups. The task was to create a web application that takes a user input, saves it to a server, and visualizes the collected data.</p>
+				<p></p>
+				<p class='explanation'>Where is home? was inspired by the diversity of New York University Abu Dhabi and Shanghai students' origin stories. Quite a few students have a list that extends beyond a single home. What's more interesting than the list is to see what each of these homes correspond to.</p>
+				<p></p>
+				<p class='explanation'>Is it the place they lived the longest? Is it the place where the person was born? What else? To capture each of these cases, the form includes a multiple choice selection. The instruction asks the client "Primarily, what do you consider this place to be?" When entering the responses, many ponder whether the location is home for them because they were born there? Or because their parents are from there?</p>
+				<p></p>
+				<p class='explanation'>In order to visualize the client input, I used <a href='https://www.chromeexperiments.com/globe'>WebGL Globe</a>, which relies on three.js to create a 3D globe. In order to visualize the datapoints, the JSON data for WebGL Globe takes a longitude, a latitude, and a magnitude. Using Google Places API, the form geolocates and autocompletes the locations, when entered.</p>
+				<p></p>
+				<p class='explanation'>In the future, this web application hopes to collect data on how connected each individual feels to the location that they have entered. The client would enter a number from one to five, five meaning the highest level of connection. This web application also hopes to further visualize statistical insight into the locations that the clients have entered.</p>
+				<p></p>
+				<p class='explanation'>To see the all the data, please click on the API in the menubar.</p>
+				</div>
+		</div>
+		</section>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpDweL5tOztdr4E6FzdDiTsYxNFe8lKEQ&libraries=places"></script>
+	
+
+	</body>
+</html>

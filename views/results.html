@@ -1,9 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>Homes on Globe</title>
+    <title>Where is home? | Results</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style_results.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
 
@@ -52,7 +54,7 @@
       var settime = function(globe, t) {
         return function() {
           new TWEEN.Tween(globe).to({time: t/years.length},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
-          console.log('year'+years[t])
+          console.log(years[t])
           var y = document.getElementById(years[t]);
           if (y.getAttribute('class') === 'year active') {
             return;
