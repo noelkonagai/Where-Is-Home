@@ -150,23 +150,26 @@ app.get("/api/jsonData", function(req,res){
 			// 	array_second[1].push(0)
 			// };
 
-			array_second[1].push(Math.round(theRows[i].doc.default.lat));
-			array_second[1].push(Math.round(theRows[i].doc.default.lng));
-			array_second[1].push(0)
 			array_second[1].push(Math.round(theRows[i].doc.second.lat));
 			array_second[1].push(Math.round(theRows[i].doc.second.lng));
-			array_second[1].push(0.01);
+			array_second[1].push(0.01)
+			array_second[1].push(Math.round(theRows[i].doc.second.lat));
+			array_second[1].push(Math.round(theRows[i].doc.second.lng));
+			array_second[1].push(0);
+			array_second[1].push(Math.round(theRows[i].doc.second.lat));
+			array_second[1].push(Math.round(theRows[i].doc.second.lng));
+			array_second[1].push(0);
 
-			for (l = 0; l < 3; l++){
-				array_second[1].push(0)
-			};
 			//pushes to third
-			for (m = 0; m < 6; m++){
-				array_third[1].push(0)
-			};
 			array_third[1].push(Math.round(theRows[i].doc.third.lat));
 			array_third[1].push(Math.round(theRows[i].doc.third.lng));
 			array_third[1].push(0.01);
+			array_third[1].push(Math.round(theRows[i].doc.third.lat));
+			array_third[1].push(Math.round(theRows[i].doc.third.lng));
+			array_third[1].push(0);
+			array_third[1].push(Math.round(theRows[i].doc.third.lat));
+			array_third[1].push(Math.round(theRows[i].doc.third.lng));
+			array_third[1].push(0);
 		};
 
 		var globeGLFile = []
