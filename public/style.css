@@ -4,19 +4,19 @@ html {
 
 }
 
-body{
+body {
 	font-family: 'Raleway', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	background-color: black;
-  	position: relative;
-  	font-size: 18px;
-  	color:  white;
-  	margin: 0px 0px 0px 0px;
-  	padding: 0px;
+	position: relative;
+	font-size: 18px;
+	color:  white;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
 }
 
 
-header{
+header {
 	position: fixed;
 	font-size: 14pt;
 	height: 80px;
@@ -37,7 +37,7 @@ header.sticky {
 }
 
 i.fa-chevron-up{
- 	-webkit-transition: all 0.2s ease-out
+	-webkit-transition: all 0.2s ease-out
 }
 
 i.fa-chevron-up:hover{
@@ -50,7 +50,6 @@ span.menuitem{
 	vertical-align: middle;
 	-webkit-transition: all 0.2s ease-out;
 	-webkit-font-smoothing: antialiased;
-
 }
 
 .sliding-middle-out {
@@ -119,19 +118,19 @@ section.title{
 }
 
 span.title{
- 	vertical-align: middle;
- 	text-align: center;
- 	font-size: 5em;
- 	z-index: 2;
- 	position: absolute;
- 	top: 300px;
- 	left: 20%;
- 	right: 20%;
- 	min-width: 50%;
- 	background: rgba(0,0,0,0.3);
- 	border-style: solid;
- 	border-width: 5px;
- 	border-color: white;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 5em;
+	z-index: 2;
+	position: absolute;
+	top: 300px;
+	left: 20%;
+	right: 20%;
+	min-width: 50%;
+	background: rgba(0,0,0,0.3);
+	border-style: solid;
+	border-width: 5px;
+	border-color: white;
 }
 
 p.css-button-light{
@@ -262,15 +261,15 @@ input[type=text]{
 	padding: 10px;
 	font-size: 12pt;
 	/*-webkit-transition: width 0.9s ease-in-out;*/
-    /*transition: width .5s ease-in-out;*/
-    -webkit-transition: 0.5s;
-    width: 300px;
-    box-sizing: border-box;
+	/*transition: width .5s ease-in-out;*/
+	-webkit-transition: 0.5s;
+	width: 300px;
+	box-sizing: border-box;
 }
 
 input[type=text]:focus {
 	/*-webkit-transition: width 0.9s ease-in-out;*/
-    border-color: #E24E42;
+	border-color: #E24E42;
 }
 
 button{
@@ -284,41 +283,41 @@ button{
 /* this is for Google Maps search box */
 
 #locationField, #controls {
-width: 480px;
+	width: 480px;
 }
 #default_city, #second_city, #third_city {
-top: 0px;
-left: 0px;
-width: 300px;
+	top: 0px;
+	left: 0px;
+	width: 300px;
 }
 
 /*This is for WebGL Globe*/
 .year {
-font: 16px Georgia;
-line-height: 26px;
-height: 30px;
-text-align: center;
-float: left;
-width: 90px;
-color: rgba(255, 255, 255, 0.4);
+	font: 16px Georgia;
+	line-height: 26px;
+	height: 30px;
+	text-align: center;
+	float: left;
+	width: 90px;
+	color: rgba(255, 255, 255, 0.4);
 
-cursor: pointer;
--webkit-transition: all 0.1s ease-out;
+	cursor: pointer;
+	-webkit-transition: all 0.1s ease-out;
 }
 
 .year:hover, .year.active {
-font-size: 23px;
-color: #fff;
+	font-size: 23px;
+	color: #fff;
 }
 
-#container{
-	    margin: 0;
-        padding: 0;
-        background: url(loading .gif) center center no-repeat;
-        height: 100%;
-        width: 100%;
-        z-index: 0;
-        position: relative;
+#container {
+	margin: 0;
+	padding: 0;
+	background: url(loading .gif) center center no-repeat;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+	position: relative;
 }
 
 canvas {
@@ -424,7 +423,7 @@ div.default_answer:after{
 
 input[type=radio]{
 	margin-left: 30px;
-    width: 30px;
+	width: 30px;
 }
 
 a{
@@ -458,4 +457,75 @@ div.about {
 
 p.explanation {
 	line-height: 20pt;
+}
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    height:     100%;
+    width:      100%;
+    background: black;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+/*This is the loading page CSS*/
+
+.loader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  float: left;
+  margin: 0 5px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: fx 1000ms ease infinite 0ms;
+          animation: fx 1000ms ease infinite 0ms;
+}
+.dot:nth-child(2) {
+  -webkit-animation: fx 1000ms ease infinite 300ms;
+          animation: fx 1000ms ease infinite 300ms;
+}
+.dot:nth-child(3) {
+  -webkit-animation: fx 1000ms ease infinite 600ms;
+          animation: fx 1000ms ease infinite 600ms;
+}
+@-webkit-keyframes fx {
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fx {
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

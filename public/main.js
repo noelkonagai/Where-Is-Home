@@ -13,7 +13,6 @@ geocoder = new google.maps.Geocoder();
 
 }
 
-
 var numReturned = 0;
 
 function codeAddress() {
@@ -122,7 +121,7 @@ $(".scroll-to-top").click(function() {
 	console.log('clicked')
     $('html,body').animate({
         scrollTop: $(".top").offset().top},
-        'slow');
+		'slow');
 });
 
 
@@ -375,3 +374,7 @@ function makeGlobe(jsonFile){
 		      xhr.send(null);
 		    }
 }
+
+$(window).load(function() {
+	$("body").removeClass("loading", 1000, "swing");
+});
