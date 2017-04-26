@@ -79,6 +79,7 @@ The project aspires to incorporate a more developed version of API routes, which
 
 ## Project Members
 Noel Konagai - Project Lead
+
 Craig Protzel - Project Grader
 
 
